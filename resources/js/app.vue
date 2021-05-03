@@ -22,24 +22,21 @@
                     <tags></tags>
                 </div>
                 <div class="col-8">
-                    Catalog
+                    <catalog></catalog>
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script>
-    import Home from './components/home'
     import Cart from './components/cart'
     import Tags from './components/tags'
+    import Catalog from './components/catalog'
     export default {
-        data: () => ({
-            Component: 'Home'
-        }),
         components: {
-            Home,
             Cart,
-            Tags
+            Tags,
+            Catalog
         },
     }
 </script>
