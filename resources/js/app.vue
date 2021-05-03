@@ -18,10 +18,10 @@
         </nav>
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-2">
                     <tags></tags>
                 </div>
-                <div class="col-8">
+                <div class="col-10">
                     <catalog></catalog>
                 </div>
             </div>
