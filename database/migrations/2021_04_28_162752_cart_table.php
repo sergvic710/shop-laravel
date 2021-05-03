@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TagToProduct extends Migration
+class CartTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class TagToProduct extends Migration
      */
     public function up()
     {
-        Schema::create('tag_to_product', function (Blueprint $table) {
-            $table->integer('product_id');
-            $table->integer('tag_id');
-        });
+        Schema::create('cart', function (Blueprint $table) {
+        $table->increments('id');
+        $table->integer('product_id');
+        $table->integer('amount');
+        $table->float('price',8,2);
+        $table->float('sum',8,2);
+        $table->timestamps();
+    });
     }
 
     /**
@@ -26,6 +30,6 @@ class TagToProduct extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tag_to_product');
+        Schema::dropIfExists('cart');
     }
 }
