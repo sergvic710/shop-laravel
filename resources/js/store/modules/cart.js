@@ -3,10 +3,12 @@ export default {
 
     },
     mutations: {
-
+        addToCart(state, id) {
+            state.cartProduct.push(id);
+        },
     },
     state: {
-        prods: [],
+        cartProduct: [],
     },
     getters: {
 
