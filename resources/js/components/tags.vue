@@ -16,7 +16,7 @@
             };
         },
         async mounted() {
-            var res = await fetch('http://127.0.0.1:8000/api/tag/list');
+            var res = await fetch('/api/tag/list');
             var tags = await res.json();
             this.tags = tags;
         }
