@@ -16,6 +16,16 @@ use Illuminate\Http\Request;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
+Route::group([
+    'prefix' => 'cart'
+], function ($route) {
+    Route::get('/list', 'CartController@index');
+    Route::post('/add', 'CartController@add');
+    Route::delete('/delete/{id}', 'CartController@delete');
+    Route::put('/update', 'CartController@update');
+});
+
 
 Route::get('/tag/list','TagController@index');
 Route::get('/product/list','ProductController@index');
+

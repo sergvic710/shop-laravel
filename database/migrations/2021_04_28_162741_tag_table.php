@@ -28,6 +28,6 @@ class TagTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('tag');
     }
 }

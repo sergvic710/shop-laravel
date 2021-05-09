@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('app');
 });
+Route::get('/cart', function () {
+    return view('cart');
+});
