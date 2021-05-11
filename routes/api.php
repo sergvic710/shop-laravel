@@ -28,4 +28,5 @@ Route::group([
 
 Route::get('/tag/list','TagController@index');
 Route::get('/product/list','ProductController@index');
+Route::get('/product/tag/list/{tag}','ProductController@tag');
 

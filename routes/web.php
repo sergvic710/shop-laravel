@@ -14,6 +14,12 @@
 Route::get('/', function () {
     return view('app');
 });
+Route::get('/catalog', function () {
+    return view('catalog');
+});
+Route::get('/catalog/tag/{code}', function () {
+    return view('catalog');
+});
 Route::get('/cart', function () {
     return view('cart');
 });

@@ -19,7 +19,12 @@
         computed: mapGetters(['listProducts']),
         methods: mapActions(["fetchListProducts",'addToCart']),
         async mounted() {
-            this.fetchListProducts();
+            var href = window.location.href;
+            console.log(href);
+            var tag = href.match("/\/tag\/(\w+)$/gi")
+            tag = 'teplovoe';
+            console.log(tag);
+            this.fetchListProducts(tag);
         },
     }
 </script>
